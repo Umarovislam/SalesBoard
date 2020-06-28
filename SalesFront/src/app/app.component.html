@@ -1,0 +1,7 @@
+<div class="chart">
+    <span>start date</span><input type="date">
+    <span>end date</span> <input type="date">
+    <div *ngIf="chart">
+        <canvas id="canvas">{{chart}}</canvas>
+    </div>
+</div>

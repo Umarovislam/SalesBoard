@@ -46,7 +46,7 @@ namespace SalesApp.Repositories
         {
             using(var connection = CreateConnection())
             {  
-                return await connection.QueryAsync<T>($"SELECT * FROM {_tableName}");;
+                return await connection.QueryAsync<T>($"SELECT * FROM {_tableName}");
             }
         }
 
@@ -64,6 +64,17 @@ namespace SalesApp.Repositories
                 var result = await connection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE Id=@Id", new { Id = id });
                 if (result == null)
                     throw new KeyNotFoundException($"{_tableName} with id [{id}] could not be found.");
+
+                return result;
+            }
+        }
+        public async Task<IEnumerable<T>> GetByFilter(DateTime first, DateTime second)
+        {
+            using (var connection = CreateConnection())
+            {
+                var result = await connection.QueryAsync<T>($"SELECT * FROM {_tableName} WHERE OrderDate BETWEEN @First AND @Second", new { First = first, Second = second });
+                if (result == null)
+                    throw new KeyNotFoundException($"{_tableName} with  DateTime first and second could not be found.");
 
                 return result;
             }

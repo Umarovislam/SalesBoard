@@ -172,3 +172,14 @@ C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\obj\Debug\Sales
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\obj\Debug\SalesApp.csproj.CopyComplete
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\obj\Debug\SalesApp.dll
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\obj\Debug\SalesApp.pdb
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Security.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Owin.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.xml
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Security.xml

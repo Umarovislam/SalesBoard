@@ -23,9 +23,13 @@ namespace SalesApp.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        [HttpGet]
+        public async Task<List<Order>> GetFiltered(DateTime first, DateTime second)
         {
-            return "value";
+
+            var orderRep = new OrderRepository("Orders");
+            var res = await orderRep.GetByFilter(first, second);
+            return res.ToList();
         }
 
         // POST api/<controller>
