@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {SalesService} from './services/sales.service';
+import {SaleService} from './services/sale.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SignalRService } from './services/signal-r.service';
@@ -13,7 +13,7 @@ import { SignalRService } from './services/signal-r.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [SalesService,SignalRService],
+  providers: [SaleService,SignalRService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,3 @@
-export interface ChartModel{
-    data:[],
-    label: string
+export interface ChartModel {
+    data:[]
 }

@@ -183,3 +183,6 @@ C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.A
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.xml
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\Microsoft.Owin.Security.xml
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\System.Web.Cors.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\System.Web.Http.Cors.dll
+C:\Users\User\Documents\TestProject\SalesBoard\SalesApp\SalesApp\bin\System.Web.Http.Cors.xml

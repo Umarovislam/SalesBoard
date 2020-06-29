@@ -46,7 +46,7 @@ namespace SalesApp.Repositories
         {
             using(var connection = CreateConnection())
             {  
-                return await connection.QueryAsync<T>($"SELECT * FROM {_tableName}");
+                return await connection.QueryAsync<T>($"SELECT TOP(20) * FROM {_tableName}");
             }
         }
 
