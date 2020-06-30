@@ -5,7 +5,7 @@
 *	Time Interval Start Date
 *	Sum of sales in time interval
 
-<img src="grash.png"/>
+<img src="graph.png"/>
 
 ### Technical Requirements:
 *	.NET Framework – C# preferred

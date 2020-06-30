@@ -1,3 +1,4 @@
 export interface ChartModel {
-    data:[]
+    startDate: Date;
+    endDate: Date
 }

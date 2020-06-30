@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable,EventEmitter } from '@angular/core';
 import { ChartModel } from '../Models/ChartModel';
-import { EventEmitter } from 'events';
 import * as signalR from '@aspnet/signalr';
 import { HubConnection,
   HubConnectionBuilder,
@@ -12,13 +11,18 @@ import { environment } from 'src/environments/environment';
 })
 export class SignalRService {
   
-  DataReceived = new EventEmitter();  
+  DataReceiver = new EventEmitter<ChartModel>();  
   connectionEstablished = new EventEmitter();  
   
   constructor() {
 
    }
 
+   private registerOnServerEvents(): void {  
+    this.hubConnection.on('DataReceiver', (data: any) => {  
+      this.DataReceiver.emit(data);  
+    });  
+  }
 
   public data: ChartModel[];
   private hubConnection : signalR.HubConnection;

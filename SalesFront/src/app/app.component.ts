@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SignalRService } from './services/signal-r.service';
 import * as Chart from 'chart.js';
 import { SaleService } from './services/sale.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,14 @@ import { SaleService } from './services/sale.service';
 export class AppComponent implements OnInit{
 
   public chart = [];
+  selectedValue = null;
+ public  periods = [
+    {id: 1, name: "United States"},
+    {id: 2, name: "Australia"},
+    {id: 3, name: "Canada"},
+    {id: 4, name: "Brazil"},
+    {id: 5, name: "England"}
+  ];
   constructor(public signalRService: SignalRService,private  sales: SaleService) {}
   ngOnInit() {
     this.signalRService.createConnection();
@@ -23,14 +32,14 @@ export class AppComponent implements OnInit{
         const allDate =  res.map(res => res.orderDate);
         let dateaxes =[];
 
-       /* allDate.forEach(element => {
-          dateaxes.push(element.toLocaleTimeString('en',{year: 'numeric', month: 'short', day: 'numeric'}))
-        });*/
+       allDate.forEach(element => {
+          dateaxes.push(moment(element).format('MM/DD/YYYY'));
+        });
 
         this.chart = new Chart('canvas', {
           type: 'line',
           data: {
-            labels: allDate,
+            labels: dateaxes,
             datasets: [
               {
                 data: temp_max,
@@ -54,5 +63,13 @@ export class AppComponent implements OnInit{
           }
         });
       });
+  }
+
+
+  private subscribeToEvent(): void{
+    this.signalRService.DataReceiver.subscribe((data:any) =>{
+      
+    })
+
   }
 }
